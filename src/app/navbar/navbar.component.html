@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img
+      (click)="goToWelcome()"
+      style="max-width: 5rem; cursor: pointer"
+      src="./../../assets/cloud-logo.png"
+      alt="Cloud Icon"
+    />
+    <span
+      (click)="goToWelcome()"
+      style="margin-left: 0.5rem; cursor: pointer"
+      class="logo"
+    >
+      <div>Cloud E-commerce</div>
+    </span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/welcome">Welcome</button>
+    <button mat-button routerLink="/products">Products</button>
+    <button mat-button routerLink="/inventory">Inventory</button>
+    <button mat-button routerLink="/orders">Orders</button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/profile">Profile</button>
+      <button mat-menu-item routerLink="/settings">Settings</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
